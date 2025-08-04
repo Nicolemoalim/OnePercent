@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.main-content {
+    flex: 1;
+    padding-top: 90px; /* Extra space below fixed header */
+    width: 100%;
+    margin: 0;
+    position: relative;
+    z-index: 1; /* Ensure content stays below header */
+}
+
+/* Navbar styles are now in Navbar.css */
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.nav-icons {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-icons a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.2rem;
+}
+
+.hero-section {
+    height: 100vh;
+    width: 100vw;
+    background-color: #f8f9fa; /* Light gray background */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    padding: 2rem;
+    color: #333; /* Dark text color for better contrast */
+}
+
+.hero-content {
+    text-align: center;
+    color: #fff;
+}
+
+.hero-content h1 {
+    font-size: 5rem;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+    letter-spacing: 2px;
+}
+
+.shop-now-btn {
+    display: inline-block;
+    padding: 1rem 3rem;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.shop-now-btn:hover {
+    background-color: #333;
+}
+/* Reset default margin/padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html, #root {
+    height: 100%;
+    width: 100%;
+  }
+  

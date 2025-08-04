@@ -1,0 +1,190 @@
+.product-card {
+  width: 100%;
+  max-width: 250px;
+  background: white;
+  border: 1px solid #e1e1e1;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.product-link {
+  text-decoration: none;
+  color: inherit;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-image-container {
+  position: relative;
+  width: 100%;
+  padding-top: 133.33%; /* 3:4 aspect ratio */
+  overflow: hidden;
+  background-color: #f8f8f8;
+}
+
+.product-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-image {
+  transform: scale(1.05);
+}
+
+.new-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #ff4d4f;
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 12px;
+  z-index: 2;
+}
+
+.product-info {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.product-name {
+  margin: 0 0 8px 0;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 2.8em;
+}
+
+.product-price {
+  margin: 0 0 12px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #000;
+}
+
+.product-options {
+  margin-top: auto;
+}
+
+.color-options, .size-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.color-swatch {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 6px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+  position: relative;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.1);
+}
+
+.color-swatch:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+
+.color-swatch.selected {
+  transform: scale(1.2);
+  border: 2px solid #000;
+  box-shadow: 0 0 5px rgba(0,0,0,0.4);
+  position: relative;
+  z-index: 1;
+}
+
+.color-swatch.selected::after {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border-radius: 50%;
+  border: 1px solid #000;
+  pointer-events: none;
+}
+
+.color-more {
+  font-size: 0.8rem;
+  color: #666;
+  align-self: center;
+  margin-left: 4px;
+}
+
+.size-option {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 28px;
+  height: 28px;
+  padding: 0 6px;
+  margin: 2px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background-color: #fff;
+  color: #333;
+}
+
+.size-option:hover {
+  background-color: #f5f5f5;
+  border-color: #999;
+}
+
+.size-option.selected {
+  background-color: #000;
+  color: #fff;
+  border-color: #000;
+  font-weight: 600;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Color mapping for common color names */
+.color-swatch[style*="black"] { background-color: #000 !important; }
+.color-swatch[style*="white"] { background-color: #fff !important; border: 1px solid #e0e0e0; }
+.color-swatch[style*="gray"], 
+.color-swatch[style*="grey"] { background-color: #9e9e9e !important; }
+.color-swatch[style*="navy"] { background-color: #001f3f !important; }
+.color-swatch[style*="blue"] { background-color: #007bff !important; }
+.color-swatch[style*="red"] { background-color: #dc3545 !important; }
+.color-swatch[style*="green"] { background-color: #28a745 !important; }
+.color-swatch[style*="yellow"] { background-color: #ffc107 !important; }
+.color-swatch[style*="pink"] { background-color: #e83e8c !important; }
+.color-swatch[style*="purple"] { background-color: #6f42c1 !important; }
